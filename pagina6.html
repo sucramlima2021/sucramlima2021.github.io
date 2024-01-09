@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personalização</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .progresso{
+          background-color: #003300;
+          min-width: 240px;  
+        }
+        @media (max-width: 1000px) {
+            .progresso{
+                display: none;
+            }
+         }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="row">
+    <div class="col-md-2 col-sm-12 progresso">
+        <div class="position-fixed">
+        <div class="d-flex m-2">
+            <img src="logo.png" class="img-fluid">
+        </div>
+        <div class="d-flex flex-column">
+            <p class="text-white text-center mt-5 fst-italic text-decoration-underline">Seu Progresso:</p>
+            <div class="d-flex my-3">
+                <a class=" btn btn-white rounded-pill border bg-light text-dark mx-2">1</a>
+                <p class="text-white ">Info de Contato</p>
+            </div>
+            <div class="d-flex my-3">
+                <a class=" btn btn-white rounded-pill border bg-light text-dark mx-2">2</a>
+                <p class="text-white ">Escolher Plano</p>
+            </div>
+            <div class="d-flex my-3">
+                <a class=" btn btn-white rounded-pill border bg-light text-dark mx-2">3</a>
+                <p class="text-white ">Conferir Coberturas</p>
+            </div>
+            <div class="d-flex my-3">
+                <a class=" btn btn-white rounded-pill border text-white mx-2">4</a>
+                <p class="text-white text-decoration-underline">Completar Cadastro</p>
+            </div>
+            <div class="d-flex my-3">
+                <a class=" btn btn-white rounded-pill border text-white mx-2">5</a>                                          
+                <p class="text-white ">Formulário de Saúde</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="col-md-10">
+        <div class="d-flex m-3 flex-column">
+        <h1 class="mt-5 text-center">Estamos quase lá!</h1>
+        <h3 class="text-center">Preencha o formulário com seus dados pessoais e seus beneficiários.</h3>
+    </div>
+      <div class="d-flex m-3 flex-column">
+        <div class="row m-5 justify-content-center fs-3">
+            Dados do Segurado:
+        </div>
+        <form>
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+              </div>
+              <div class="col-md-3">
+                <label for="cpf">CPF:</label>
+                <input type="text" class="form-control" id="cpf" name="cpf" required>
+              </div>
+              <div class="col-md-3">
+                <label for="rg">RG:</label>
+                <input type="text" class="form-control" id="rg" name="rg">
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-3">
+                <label for="org_exp">Org. Exp.:</label>
+                <input type="text" class="form-control" id="org_exp" name="org_exp">
+              </div>
+              <div class="col-md-3">
+                <label for="emissao">Emissão:</label>
+                <input type="date" class="form-control" id="emissao" name="emissao">
+              </div>
+              <div class="col-md-3">
+                <label for="estado_civil">Estado Civil:</label>
+                <select class="form-control" id="estado_civil" name="estado_civil">
+                  <option value="">Selecione</option>
+                  <option value="solteiro">Solteiro(a)</option>
+                  <option value="casado">Casado(a)</option>
+                  <option value="viuvo">Viúvo(a)</option>
+                  <option value="divorciado">Divorciado(a)</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="profissao">Profissão / Função:</label>
+                <input type="text" class="form-control" id="profissao" name="profissao">
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-3">
+                <label for="matricula">Matrícula / CB:</label>
+                <input type="text" class="form-control" id="matricula" name="matricula">
+              </div>
+              <div class="col-md-3">
+                <label for="localizador">Localizador:</label>
+                <input type="text" class="form-control" id="localizador" name="localizador">
+              </div>
+              <div class="col-md-6">
+                <label for="endereco">Endereço:</label>
+                <input type="text" class="form-control" id="endereco" name="endereco" required>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-2">
+                  <label for="num">Número:</label>
+                  <input type="text" class="form-control" id="num" name="num">
+                </div>
+                <div class="col-md-3">
+                    <label for="bairro">Bairro:</label>
+                  <input type="text" class="form-control" id="bairro" name="bairro" required>
+                </div>
+                <div class="col-md-2">
+                    <label for="cep">cep:</label>
+                  <input type="text" class="form-control" id="cep" name="cep" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="cidade">Cidade:</label>
+                  <input type="text" class="form-control" id="cidade" name="cidade" required>
+                </div>
+                <div class="col-md-1">
+                    <label for="uf">UF:</label>
+                  <input type="text" class="form-control" id="uf" name="uf" required>
+                </div>
+              </div>
+            <div class="row justify-content-center">
+              <div class="col-md-4">
+                <label for="email_pessoal">E-mail Pessoal:</label>
+                <input type="email" class="form-control" id="email_pessoal" name="email_pessoal">
+              </div>
+              <div class="col-md-4">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="col-md-2">
+                <label for="tel">Telefone:</label>
+                <input type="text" class="form-control" id="tel" name="tel">
+              </div>
+              <div class="col-md-2">
+                <label for="cel">Celular:</label>
+                <input type="text" class="form-control" id="cel" name="cel" required>
+              </div>
+            </div>
+            <div class="row m-5 justify-content-center fs-3">
+                Dados dos Beneficiários:
+            </div>
+
+            <div class="row justify-content-center fs-5">
+                CEPE Vida 1:
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                  <label for="nome">Beneficiário 1:</label>
+                  <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="parentesco">Parentesco:</label>
+                  <input type="text" class="form-control" id="parentesco" name="parentesco" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="nascimento">Nascimento:</label>
+                  <input type="text" class="form-control" id="nascimento" name="nascimento">
+                </div>
+                <div class="col-md-2">
+                    <label for="perc">Percentual:</label>
+                    <input type="text" class="form-control" id="perc" name="perc">
+                  </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-md-4">
+                  <label for="nome">Beneficiário 2:</label>
+                  <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="parentesco">Parentesco:</label>
+                  <input type="text" class="form-control" id="parentesco" name="parentesco" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="nascimento">Nascimento:</label>
+                  <input type="text" class="form-control" id="nascimento" name="nascimento">
+                </div>
+                <div class="col-md-2">
+                    <label for="perc">Percentual:</label>
+                    <input type="text" class="form-control" id="perc" name="perc">
+                  </div>
+              </div>
+              <div class="row justify-content-center mb-5">
+                <div class="col-md-4">
+                  <label for="nome">Beneficiário 3:</label>
+                  <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="parentesco">Parentesco:</label>
+                  <input type="text" class="form-control" id="parentesco" name="parentesco" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="nascimento">Nascimento:</label>
+                  <input type="text" class="form-control" id="nascimento" name="nascimento">
+                </div>
+                <div class="col-md-2">
+                    <label for="perc">Percentual:</label>
+                    <input type="text" class="form-control" id="perc" name="perc">
+                  </div>
+              </div>
+
+
+              <div class="row justify-content-center fs-5">
+                CEPE Vida 2:
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                  <label for="nome">Beneficiário 1:</label>
+                  <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="parentesco">Parentesco:</label>
+                  <input type="text" class="form-control" id="parentesco" name="parentesco" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="nascimento">Nascimento:</label>
+                  <input type="text" class="form-control" id="nascimento" name="nascimento">
+                </div>
+                <div class="col-md-2">
+                    <label for="perc">Percentual:</label>
+                    <input type="text" class="form-control" id="perc" name="perc">
+                  </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-md-4">
+                  <label for="nome">Beneficiário 2:</label>
+                  <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="parentesco">Parentesco:</label>
+                  <input type="text" class="form-control" id="parentesco" name="parentesco" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="nascimento">Nascimento:</label>
+                  <input type="text" class="form-control" id="nascimento" name="nascimento">
+                </div>
+                <div class="col-md-2">
+                    <label for="perc">Percentual:</label>
+                    <input type="text" class="form-control" id="perc" name="perc">
+                  </div>
+              </div>
+              <div class="row justify-content-center mb-5">
+                <div class="col-md-4">
+                  <label for="nome">Beneficiário 3:</label>
+                  <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="parentesco">Parentesco:</label>
+                  <input type="text" class="form-control" id="parentesco" name="parentesco" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="nascimento">Nascimento:</label>
+                  <input type="text" class="form-control" id="nascimento" name="nascimento">
+                </div>
+                <div class="col-md-2">
+                    <label for="perc">Percentual:</label>
+                    <input type="text" class="form-control" id="perc" name="perc">
+                  </div>
+              </div>
+
+
+              <div class="row justify-content-center fs-5">
+                CEPE Mulher:
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                  <label for="nome">Beneficiário 1:</label>
+                  <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="parentesco">Parentesco:</label>
+                  <input type="text" class="form-control" id="parentesco" name="parentesco" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="nascimento">Nascimento:</label>
+                  <input type="text" class="form-control" id="nascimento" name="nascimento">
+                </div>
+                <div class="col-md-2">
+                    <label for="perc">Percentual:</label>
+                    <input type="text" class="form-control" id="perc" name="perc">
+                  </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-md-4">
+                  <label for="nome">Beneficiário 2:</label>
+                  <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="parentesco">Parentesco:</label>
+                  <input type="text" class="form-control" id="parentesco" name="parentesco" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="nascimento">Nascimento:</label>
+                  <input type="text" class="form-control" id="nascimento" name="nascimento">
+                </div>
+                <div class="col-md-2">
+                    <label for="perc">Percentual:</label>
+                    <input type="text" class="form-control" id="perc" name="perc">
+                  </div>
+              </div>
+              <div class="row justify-content-center mb-5">
+                <div class="col-md-4">
+                  <label for="nome">Beneficiário 3:</label>
+                  <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="parentesco">Parentesco:</label>
+                  <input type="text" class="form-control" id="parentesco" name="parentesco" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="nascimento">Nascimento:</label>
+                  <input type="text" class="form-control" id="nascimento" name="nascimento">
+                </div>
+                <div class="col-md-2">
+                    <label for="perc">Percentual:</label>
+                    <input type="text" class="form-control" id="perc" name="perc">
+                  </div>
+              </div>
+
+</form>
+
+      </div> 
+      <div class="row sticky-bottom" style="background-color: #003300;">
+        <div class="d-flex text-white p-3 align-items-center justify-content-end">
+            
+            <a class="btn btn-outline-warning mx-5" style="width: 250px;">Ver Resumo das Coberturas</a>
+        <a class="btn btn-outline-light mx-5" style="width: 250px;">Continuar</a>
+    </div>
+</div>  
+    
+</div>
+</div>
+    
+    <script>
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

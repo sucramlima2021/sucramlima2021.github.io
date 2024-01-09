@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar cliente</title>
+</head>
+<body>
+    <div class="container my-5">
+        <h2>Criar Pessoa</h2>
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Salvar</button>
+    </form>
+    </div>
+    
+</body>
+</html>
+

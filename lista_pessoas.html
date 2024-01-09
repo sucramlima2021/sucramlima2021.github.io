@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar clientes</title>
+</head>
+<body>
+
+    <h2>Lista de Pessoas</h2>
+
+  {% if pessoas %}
+    <ul>
+      {% for pessoa in pessoas %}
+        <li>
+          <strong>{{ pessoa.nome }}</strong>
+          <br>
+          Email: {{ pessoa.email }}<br>
+          Telefone: {{ pessoa.telefone }}<br>
+          Nascimento: {{ pessoa.nascimento }}<br>
+          Validado: {% if pessoa.validado %}Sim{% else %}Não{% endif %}<br>
+          Código: {{ pessoa.codigo }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Nenhuma pessoa cadastrada.</p>
+  {% endif %}
+    
+</body>
+</html>
