@@ -586,14 +586,14 @@ Não precisar se preoucupar com nada em momentos difíceis é aliviador.
             
                    
                                
-                    <form method="post">
+                    <form>
                         <div class="row contact-text justify-content-center">
                             
             
                             <div class="col-lg-6">
                                 <div class="row justify-content-center"><input type="text" name="nome" placeholder="Nome" id="nome" class="border mb-2 w-75"></div>
-                                <div class="row justify-content-center"><input type="text" name="email" placeholder="Email" id="email" class="border mb-2 w-75 "></div>
-                                <div class="row justify-content-center"><input required type="text" name="data" placeholder="Data de nascimento" id="nasc" class="border  mb-2 w-75"></div>
+                                <div class="row justify-content-center"><input type="email" name="email" placeholder="Email" id="email" class="border mb-2 w-75 "></div>
+                                <div class="row justify-content-center"><input type="text" name="data" placeholder="Data de nascimento" id="nasc" class="border  mb-2 w-75"></div>
                                 <div class="row justify-content-center"><input type="text" name="telefone" placeholder="DDD + Telefone" id="tel" class="border mb-2 w-75"></div>
                                 <div class="row justify-content-center"><div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="petro">
@@ -617,7 +617,7 @@ Não precisar se preoucupar com nada em momentos difíceis é aliviador.
                                 </div>
                             </div>
                                 <div class="row justify-content-center mt-4">
-                                <button name="BTContato" onclick="teste()" class="leia-mais">Começar</button>
+                                <button name="BTContato" id="btcontato" class="leia-mais">Começar</button>
                                
         
                             </div>
@@ -1049,6 +1049,9 @@ Centro, Rio de Janeiro – RJ<br><br>
     <!-- Footer Section End -->
 
 
+    
+
+
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -1060,22 +1063,37 @@ Centro, Rio de Janeiro – RJ<br><br>
     <script src="js/main.js"></script>
 
     <script>
+        const btn = document.getElementById("btcontato");
+        btn.addEventListener("click", function(e) {
+    
+    e.preventDefault();
+    console.log("teste");
+    teste();
+  });
         function teste(){
+            var petro = document.getElementById("petro");
             var btnok = document.getElementById("gridRadios2");
             var nome = document.getElementById("nome")
             var email = document.getElementById("email")
             var nasc = document.getElementById("nasc")
             var tel = document.getElementById("tel")
             if (btnok.checked){
-                
-                window.location.href = "pagina4.html"
-                
+                if (petro.checked){
+                window.location.href = "pagina4.html";
+                }
+                else{
+                    alert("Será necessário digitar o código enviado por email");  
+                    window.location.href = "pagina4.html";
+                }
             }
             else{
                 alert("Você precisa concordar com os termos");
             }
             
         
+        }
+        function vai(){
+            window.location.href = "pagina4.html"
         }
     </script>
 </body>
